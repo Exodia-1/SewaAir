@@ -108,27 +108,35 @@ const ConsentForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Success Modal */}
+      {/* Success Modal - Elegant Design */}
       {showSuccessModal && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform animate-in zoom-in duration-300">
-            <div className="text-center">
-              <div className="mx-auto w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-6 animate-bounce">
-                <CheckCircle2 className="h-12 w-12 text-white" />
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden">
+            {/* Header */}
+            <div className="bg-gradient-to-r from-red-700 to-red-900 p-8 text-center">
+              <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
+                <CheckCircle2 className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="text-3xl font-bold text-gray-900 mb-3">Successfully Submitted!</h3>
-              <p className="text-gray-600 mb-6 text-lg">
-                Your consent form has been submitted successfully.
+              <h3 className="text-3xl font-bold text-white mb-2">Form Submitted</h3>
+              <p className="text-red-100 text-lg">
+                Your consent form has been successfully received
               </p>
-              <div className="bg-gradient-to-r from-red-50 to-amber-50 rounded-xl p-5 mb-6 border-2 border-red-200">
-                <p className="text-sm text-gray-600 mb-2">Your Reference ID:</p>
-                <p className="text-2xl font-bold text-red-800 font-mono">{submissionId}</p>
+            </div>
+            
+            {/* Content */}
+            <div className="p-8">
+              <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
+                <p className="text-sm text-gray-600 mb-2 font-medium">Reference ID</p>
+                <p className="text-3xl font-bold text-gray-900 font-mono tracking-tight">{submissionId}</p>
               </div>
+              <p className="text-gray-600 text-center mb-6">
+                Please save this reference ID for your records
+              </p>
               <Button
                 onClick={() => setShowSuccessModal(false)}
-                className="w-full bg-gradient-to-r from-red-700 to-red-900 hover:from-red-800 hover:to-red-950 text-white py-6 text-lg rounded-xl shadow-lg"
+                className="w-full bg-gradient-to-r from-red-700 to-red-900 hover:from-red-800 hover:to-red-950 text-white py-6 text-lg rounded-xl"
               >
-                Close
+                Continue
               </Button>
             </div>
           </div>
@@ -165,36 +173,19 @@ const ConsentForm = () => {
         </div>
       </header>
 
-      {/* Premium Hero - No Image, Better Gradient */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-red-800 via-red-700 to-amber-600">
-        {/* Decorative Elements */}
+      {/* Clean Hero - No Images */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-red-800 via-red-700 to-amber-600 py-24">
+        {/* Subtle Decorative Elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-300 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="relative container mx-auto px-6 py-24 text-center">
-          <div className="inline-block mb-8 p-6 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
-            <Shield className="h-24 w-24 text-amber-300" />
-          </div>
+        <div className="relative container mx-auto px-6 text-center">
           <h2 className="text-6xl font-bold mb-6 text-white drop-shadow-lg">Passenger Consent Form</h2>
-          <p className="text-2xl text-red-50 max-w-3xl mx-auto leading-relaxed">
-            Secure, reliable, and compliant travel documentation
+          <p className="text-2xl text-red-50 max-w-2xl mx-auto leading-relaxed">
+            Please complete the form below to proceed with your travel documentation
           </p>
-          <div className="mt-8 flex justify-center gap-6 text-white/90">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-5 w-5 text-amber-300" />
-              <span className="text-sm font-medium">Encrypted Data</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-5 w-5 text-amber-300" />
-              <span className="text-sm font-medium">GDPR Compliant</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-5 w-5 text-amber-300" />
-              <span className="text-sm font-medium">Instant Processing</span>
-            </div>
-          </div>
         </div>
       </div>
 
