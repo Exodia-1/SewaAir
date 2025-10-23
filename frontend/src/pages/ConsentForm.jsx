@@ -23,6 +23,8 @@ const ConsentForm = () => {
   });
   const [disclaimerAccepted, setDisclaimerAccepted] = useState(false);
   const [errors, setErrors] = useState({});
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+  const [submissionId, setSubmissionId] = useState('');
 
   const validateForm = () => {
     const newErrors = {};
