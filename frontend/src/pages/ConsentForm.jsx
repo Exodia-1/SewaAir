@@ -137,8 +137,6 @@ const ConsentForm = () => {
 
       {/* Premium Header with Better Logo */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-40">
-      {/* Premium Header with Logo */}
-      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-50">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
