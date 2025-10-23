@@ -73,9 +73,9 @@ const ConsentForm = () => {
       return;
     }
 
-    const submissionId = `SEWA-${Date.now()}`;
+    const id = `SEWA-${Date.now()}`;
     const submission = {
-      id: submissionId,
+      id: id,
       ...formData,
       dateOfBirth: formData.dateOfBirth ? format(formData.dateOfBirth, 'dd/MM/yyyy') : '',
       submittedAt: new Date().toISOString(),
@@ -85,10 +85,8 @@ const ConsentForm = () => {
     existingSubmissions.push(submission);
     localStorage.setItem('sewaAirSubmissions', JSON.stringify(existingSubmissions));
 
-    toast({
-      title: 'Success!',
-      description: `Your consent form has been submitted successfully. Reference ID: ${submissionId}`,
-    });
+    setSubmissionId(id);
+    setShowSuccessModal(true);
 
     setFormData({
       name: '',
