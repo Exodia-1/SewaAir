@@ -8,7 +8,7 @@ import { Checkbox } from '../components/ui/checkbox';
 import { Calendar } from '../components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '../components/ui/popover';
 import { useToast } from '../hooks/use-toast';
-import { Plane, CalendarIcon, Shield, CheckCircle2 } from 'lucide-react';
+import { Plane, CalendarIcon, Shield, CheckCircle2, Lock } from 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '../lib/utils';
 
@@ -108,183 +108,233 @@ const ConsentForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Simple Header */}
-      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-xl">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex items-center space-x-4">
-            <div className="bg-gradient-to-br from-amber-400 to-amber-600 p-3 rounded-lg shadow-lg">
-              <Plane className="h-8 w-8 text-white" />
+      {/* Premium Header */}
+      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-50">
+        <div className="container mx-auto px-6 py-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-amber-400 rounded-xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-amber-400 to-amber-600 p-4 rounded-xl shadow-xl">
+                  <Plane className="h-9 w-9 text-white" />
+                </div>
+              </div>
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight">SewaAir</h1>
+                <p className="text-red-100 text-base font-light">Passenger Consent Form</p>
+              </div>
             </div>
-            <div>
-              <h1 className="text-3xl font-bold">SewaAir</h1>
-              <p className="text-red-100 text-sm">Passenger Consent Form</p>
-            </div>
+            <a
+              href="/admin"
+              className="flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+            >
+              <Lock className="h-5 w-5" />
+              Admin Panel
+            </a>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-red-900 via-purple-900 to-red-900 py-16">
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}></div>
+      {/* Premium Hero */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/95 via-purple-900/90 to-red-900/95 z-10"></div>
+        <div 
+          className="absolute inset-0 opacity-25"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        ></div>
         
-        <div className="relative container mx-auto px-4 text-center">
-          <Shield className="h-16 w-16 mx-auto mb-4 text-amber-400" />
-          <h2 className="text-4xl font-bold mb-3 text-white">Passenger Consent Form</h2>
-          <p className="text-xl text-red-100">
-            Please complete this form to provide your consent for travel services
+        <div className="relative z-20 container mx-auto px-6 py-20 text-center">
+          <div className="inline-block mb-6 p-5 bg-white/10 backdrop-blur-md rounded-2xl">
+            <Shield className="h-20 w-20 text-amber-400" />
+          </div>
+          <h2 className="text-5xl font-bold mb-4 text-white">Passenger Consent Form</h2>
+          <p className="text-2xl text-red-100 max-w-3xl mx-auto">
+            Secure and streamlined travel documentation
           </p>
         </div>
       </div>
 
-      {/* Form Section */}
-      <div className="container mx-auto px-4 py-12 max-w-3xl">
-        <Card className="shadow-2xl border-0">
-          <CardHeader className="bg-gradient-to-r from-red-50 to-amber-50 border-b">
-            <CardTitle className="text-2xl text-red-900">Personal Information</CardTitle>
-            <CardDescription className="text-gray-600">
-              All fields are mandatory. Please ensure the information is accurate.
-            </CardDescription>
+      {/* Premium Form */}
+      <div className="container mx-auto px-6 py-16 max-w-4xl">
+        <Card className="shadow-2xl border-0 overflow-hidden">
+          <CardHeader className="bg-gradient-to-r from-red-50 via-amber-50 to-red-50 border-b-2 border-amber-200 py-8">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-gradient-to-br from-red-700 to-red-800 rounded-xl">
+                <Plane className="h-7 w-7 text-white" />
+              </div>
+              <div>
+                <CardTitle className="text-3xl text-red-900 font-bold">Personal Information</CardTitle>
+                <CardDescription className="text-base text-gray-600 mt-1">
+                  Please provide accurate information as per your travel documents
+                </CardDescription>
+              </div>
+            </div>
           </CardHeader>
-          <CardContent className="pt-8 pb-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <CardContent className="p-10">
+            <form onSubmit={handleSubmit} className="space-y-8">
               {/* Name Field */}
-              <div className="space-y-2">
-                <Label htmlFor="name" className="text-gray-700 font-medium">Full Name *</Label>
+              <div className="space-y-3">
+                <Label htmlFor="name" className="text-gray-800 font-semibold text-base">
+                  Full Name *
+                </Label>
                 <Input
                   id="name"
                   placeholder="Enter your full name as per passport"
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className={cn(
-                    "transition-all duration-200",
-                    errors.name && "border-red-500"
+                    "h-14 text-lg px-5 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm",
+                    errors.name ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
                   )}
                 />
-                {errors.name && <p className="text-sm text-red-600">{errors.name}</p>}
+                {errors.name && <p className="text-sm text-red-600 font-medium">{errors.name}</p>}
               </div>
 
               {/* Phone Number Field */}
-              <div className="space-y-2">
-                <Label htmlFor="phoneNumber" className="text-gray-700 font-medium">Phone Number *</Label>
+              <div className="space-y-3">
+                <Label htmlFor="phoneNumber" className="text-gray-800 font-semibold text-base">
+                  Phone Number *
+                </Label>
                 <Input
                   id="phoneNumber"
                   placeholder="+91 1234567890"
                   value={formData.phoneNumber}
                   onChange={(e) => handleInputChange('phoneNumber', e.target.value)}
                   className={cn(
-                    "transition-all duration-200",
-                    errors.phoneNumber && "border-red-500"
+                    "h-14 text-lg px-5 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm",
+                    errors.phoneNumber ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
                   )}
                 />
-                {errors.phoneNumber && <p className="text-sm text-red-600">{errors.phoneNumber}</p>}
+                {errors.phoneNumber && <p className="text-sm text-red-600 font-medium">{errors.phoneNumber}</p>}
               </div>
 
               {/* Address Field */}
-              <div className="space-y-2">
-                <Label htmlFor="address" className="text-gray-700 font-medium">Residential Address *</Label>
+              <div className="space-y-3">
+                <Label htmlFor="address" className="text-gray-800 font-semibold text-base">
+                  Residential Address *
+                </Label>
                 <Textarea
                   id="address"
-                  placeholder="Enter your complete address"
+                  placeholder="Enter your complete residential address"
                   value={formData.address}
                   onChange={(e) => handleInputChange('address', e.target.value)}
                   className={cn(
-                    "min-h-24 transition-all duration-200",
-                    errors.address && "border-red-500"
+                    "min-h-32 text-lg px-5 py-4 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm resize-none",
+                    errors.address ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
                   )}
                 />
-                {errors.address && <p className="text-sm text-red-600">{errors.address}</p>}
+                {errors.address && <p className="text-sm text-red-600 font-medium">{errors.address}</p>}
               </div>
 
               {/* Passport Number Field */}
-              <div className="space-y-2">
-                <Label htmlFor="passportNumber" className="text-gray-700 font-medium">Passport Number *</Label>
+              <div className="space-y-3">
+                <Label htmlFor="passportNumber" className="text-gray-800 font-semibold text-base">
+                  Passport Number *
+                </Label>
                 <Input
                   id="passportNumber"
                   placeholder="e.g., A1234567"
                   value={formData.passportNumber}
                   onChange={(e) => handleInputChange('passportNumber', e.target.value.toUpperCase())}
                   className={cn(
-                    "uppercase transition-all duration-200 font-mono",
-                    errors.passportNumber && "border-red-500"
+                    "h-14 text-lg px-5 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm uppercase font-mono tracking-wider",
+                    errors.passportNumber ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
                   )}
                 />
-                {errors.passportNumber && <p className="text-sm text-red-600">{errors.passportNumber}</p>}
+                {errors.passportNumber && <p className="text-sm text-red-600 font-medium">{errors.passportNumber}</p>}
               </div>
 
               {/* Date of Birth Field */}
-              <div className="space-y-2">
-                <Label className="text-gray-700 font-medium">Date of Birth *</Label>
+              <div className="space-y-3">
+                <Label className="text-gray-800 font-semibold text-base">Date of Birth *</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal",
-                        !formData.dateOfBirth && "text-muted-foreground",
-                        errors.dateOfBirth && "border-red-500"
+                        "w-full h-14 justify-start text-left font-normal text-lg px-5 border-2 rounded-xl hover:scale-[1.01] transition-all duration-300 shadow-sm",
+                        !formData.dateOfBirth && "text-gray-500",
+                        errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-gray-300 hover:border-red-300"
                       )}
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
-                      {formData.dateOfBirth ? format(formData.dateOfBirth, 'dd/MM/yyyy') : <span>Select date</span>}
+                      <CalendarIcon className="mr-3 h-5 w-5 text-red-600" />
+                      {formData.dateOfBirth ? (
+                        <span className="font-medium">{format(formData.dateOfBirth, 'dd/MM/yyyy')}</span>
+                      ) : (
+                        <span>Select your date of birth</span>
+                      )}
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
+                  <PopoverContent className="w-auto p-0 shadow-2xl" align="start">
                     <Calendar
                       mode="single"
                       selected={formData.dateOfBirth}
                       onSelect={(date) => handleInputChange('dateOfBirth', date)}
                       disabled={(date) => date > new Date() || date < new Date('1900-01-01')}
                       initialFocus
+                      className="rounded-xl"
                     />
                   </PopoverContent>
                 </Popover>
-                {errors.dateOfBirth && <p className="text-sm text-red-600">{errors.dateOfBirth}</p>}
+                {errors.dateOfBirth && <p className="text-sm text-red-600 font-medium">{errors.dateOfBirth}</p>}
               </div>
 
-              {/* Disclaimer Section */}
-              <div className="bg-amber-50 border-2 border-amber-200 rounded-lg p-6 space-y-4">
-                <h3 className="font-bold text-lg text-amber-900 flex items-center gap-2">
-                  <Shield className="h-5 w-5" />
+              {/* Premium Disclaimer */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-8 space-y-5 shadow-lg">
+                <h3 className="font-bold text-xl text-amber-900 flex items-center gap-3">
+                  <Shield className="h-6 w-6" />
                   Consent & Disclaimer
                 </h3>
-                <div className="text-sm text-gray-700 space-y-2">
-                  <p className="font-medium">
+                <div className="text-base text-gray-700 space-y-3 leading-relaxed">
+                  <p className="font-semibold">
                     By submitting this form, I hereby acknowledge and agree to the following:
                   </p>
-                  <ul className="list-disc list-inside space-y-1 ml-2">
-                    <li>All information provided is accurate and complete</li>
-                    <li>I consent to SewaAir processing my personal data for travel-related services</li>
-                    <li>I understand that false information may result in denial of services</li>
-                    <li>I agree to comply with all applicable travel regulations</li>
+                  <ul className="space-y-2 ml-1">
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>All information provided is accurate and complete to the best of my knowledge</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>I consent to SewaAir processing my personal data for travel-related services</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>I understand that false information may result in denial of services</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                      <span>I agree to comply with all applicable travel regulations and airline policies</span>
+                    </li>
                   </ul>
                 </div>
-                <div className="flex items-start space-x-3 pt-2">
+                <div className="flex items-start space-x-4 pt-3 bg-white rounded-xl p-5 border-2 border-amber-200">
                   <Checkbox
                     id="disclaimer"
                     checked={disclaimerAccepted}
                     onCheckedChange={setDisclaimerAccepted}
-                    className="mt-1"
+                    className="mt-1 h-5 w-5"
                   />
                   <Label
                     htmlFor="disclaimer"
-                    className="text-sm font-medium leading-relaxed cursor-pointer"
+                    className="text-base font-semibold leading-relaxed cursor-pointer text-gray-800"
                   >
                     I have read and agree to the above terms and conditions *
                   </Label>
                 </div>
-                {errors.disclaimer && <p className="text-sm text-red-600">{errors.disclaimer}</p>}
+                {errors.disclaimer && <p className="text-sm text-red-600 font-bold">{errors.disclaimer}</p>}
               </div>
 
-              {/* Submit Button */}
+              {/* Premium Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 text-white font-semibold py-6 text-lg shadow-lg transition-all duration-300"
+                className="w-full bg-gradient-to-r from-red-700 via-red-800 to-red-900 hover:from-red-800 hover:via-red-900 hover:to-red-950 text-white font-bold py-7 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-[1.02] rounded-xl"
               >
-                <CheckCircle2 className="mr-2 h-5 w-5" />
+                <CheckCircle2 className="mr-3 h-6 w-6" />
                 Submit Consent Form
               </Button>
             </form>
@@ -292,9 +342,9 @@ const ConsentForm = () => {
         </Card>
 
         {/* Footer */}
-        <div className="text-center mt-8 text-gray-600">
-          <p className="text-sm">
-            Your privacy is important to us. All data is stored securely.
+        <div className="text-center mt-10 text-gray-600">
+          <p className="text-base">
+            Your privacy is important to us. All data is stored securely and processed confidentially.
           </p>
         </div>
       </div>
