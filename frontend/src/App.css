@@ -56,3 +56,16 @@ button, input, textarea, select {
 ::-webkit-scrollbar-thumb:hover {
     background: #7f1d1d;
 }
+
+/* Hide any external badges */
+[data-badge],
+.emergent-badge,
+[class*="Made with"],
+[class*="emergent"]:not([class*="App"]),
+[id*="emergent"],
+div[style*="position: fixed"][style*="bottom"],
+div[style*="position: fixed"][style*="right"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
