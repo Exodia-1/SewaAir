@@ -95,22 +95,33 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-stone-50">
-      {/* Elegant Header */}
+      {/* Elegant Header with New Logo */}
       <header className="bg-white border-b border-gray-200 shadow-sm">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <h1 className="text-4xl font-bold tracking-wide" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, letterSpacing: '3px', color: '#7f1d1d' }}>
-                Sewa<span className="font-light" style={{ color: '#d97706' }}>Air</span>
-              </h1>
-              <svg className="h-12 w-16 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
-                      fill="#d97706" 
-                      opacity="0.8"/>
-                <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
-                      fill="#b45309" 
-                      opacity="0.6"/>
-              </svg>
+            <div className="flex items-center gap-4">
+              {/* Circular Aviation Logo */}
+              <div className="relative">
+                <svg className="h-14 w-14" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Outer circle */}
+                  <circle cx="50" cy="50" r="48" stroke="#d97706" strokeWidth="2.5" opacity="0.3"/>
+                  {/* Inner circle */}
+                  <circle cx="50" cy="50" r="40" stroke="#b45309" strokeWidth="2" opacity="0.5"/>
+                  {/* Stylized airplane */}
+                  <path d="M50 25 L50 50 L70 60 M50 50 L30 60" stroke="#7f1d1d" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M50 45 L40 48 M50 45 L60 48" stroke="#7f1d1d" strokeWidth="3" strokeLinecap="round"/>
+                  {/* Tail */}
+                  <path d="M50 55 L45 65 M50 55 L55 65" stroke="#7f1d1d" strokeWidth="2.5" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h1 className="text-3xl font-bold tracking-wide" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, color: '#292524' }}>
+                  SewaAir
+                </h1>
+                <p className="text-xs text-gray-500 tracking-widest" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 500, letterSpacing: '2px' }}>
+                  AVIATION SERVICES
+                </p>
+              </div>
             </div>
             <a
               href="/"
