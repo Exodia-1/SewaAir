@@ -95,33 +95,40 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Header with Sophisticated Logo and Back Link */}
+      {/* Header with Air India Style Logo and Back Link */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-5">
-              {/* Sophisticated Logo */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl blur-xl opacity-50"></div>
-                <div className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 rounded-2xl shadow-2xl border-2 border-amber-200">
-                  <div className="text-center">
-                    <div className="text-white font-bold text-2xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>S</div>
-                    <div className="text-white text-xs font-semibold" style={{ fontFamily: 'Poppins, sans-serif' }}>AIR</div>
-                  </div>
+            <div className="flex items-center space-x-4">
+              {/* Air India Style Logo with Swoosh */}
+              <div className="flex items-center gap-3">
+                <div className="flex flex-col">
+                  <h1 className="text-4xl font-bold tracking-wide text-white" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '2px' }}>
+                    SEWAAIR
+                  </h1>
                 </div>
-              </div>
-              <div>
-                <h1 className="text-4xl font-bold" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px' }}>SewaAir Admin</h1>
-                <p className="text-red-100 text-base font-medium tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>CONSENT FORM MANAGEMENT</p>
+                {/* Red Swoosh Element */}
+                <svg className="h-12 w-16" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 38C2 38 15 32 25 25C35 18 45 10 58 2C58 2 50 8 40 15C30 22 20 30 10 36C8 37.5 5 38.5 2 38Z" 
+                        fill="url(#redGradient)" 
+                        stroke="url(#redGradient)" 
+                        strokeWidth="1"/>
+                  <defs>
+                    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
+                      <stop offset="100%" style={{ stopColor: '#b91c1c', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
             </div>
             <a
               href="/"
-              className="flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              className="flex items-center gap-2 px-6 py-3 bg-red-700 hover:bg-red-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               <Plane className="h-5 w-5" />
-              Back to Form
+              BACK TO FORM
             </a>
           </div>
         </div>
