@@ -158,8 +158,8 @@ const ConsentForm = () => {
                 </div>
               </div>
               <div>
-                <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>SewaAir</h1>
-                <p className="text-red-100 text-base font-light tracking-wide">Excellence in Aviation</p>
+                <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>SewaAir</h1>
+                <p className="text-red-100 text-base font-light tracking-wide" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Excellence in Aviation</p>
               </div>
             </div>
             <a
