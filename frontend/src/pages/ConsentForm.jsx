@@ -113,20 +113,18 @@ const ConsentForm = () => {
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              {/* Premium Logo */}
+              {/* Premium Airline Logo */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-amber-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
-                <div className="relative bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 p-4 rounded-2xl shadow-2xl border-2 border-amber-300">
-                  <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <path d="M2 17l10 5 10-5" />
-                    <path d="M2 12l10 5 10-5" />
+                <div className="absolute inset-0 bg-amber-500 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 p-4 rounded-2xl shadow-2xl border-2 border-amber-300">
+                  <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
                   </svg>
                 </div>
               </div>
               <div>
                 <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>SewaAir</h1>
-                <p className="text-red-100 text-base font-light">Passenger Consent Form</p>
+                <p className="text-red-100 text-base font-light tracking-wide">Excellence in Aviation</p>
               </div>
             </div>
             <a
