@@ -36,6 +36,14 @@ const webpackConfig = {
     },
     configure: (webpackConfig) => {
 
+      // Suppress ResizeObserver errors in production build
+      if (webpackConfig.mode === 'production') {
+        webpackConfig.performance = {
+          ...webpackConfig.performance,
+          hints: false,
+        };
+      }
+
       // Disable hot reload completely if environment variable is set
       if (config.disableHotReload) {
         // Remove hot reload related plugins
