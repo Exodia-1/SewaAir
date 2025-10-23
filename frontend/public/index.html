@@ -21,6 +21,34 @@
         display: none !important;
       }
     </style>
+    <script>
+      // Global error handler for ResizeObserver
+      window.addEventListener('error', function(event) {
+        if (event.message && (
+          event.message.includes('ResizeObserver') ||
+          event.message.includes('resize observer')
+        )) {
+          event.stopImmediatePropagation();
+          event.preventDefault();
+          return false;
+        }
+      }, true);
+
+      // Override console.error before React loads
+      (function() {
+        const originalError = console.error;
+        console.error = function(...args) {
+          const msg = args[0];
+          if (typeof msg === 'string' && (
+            msg.includes('ResizeObserver') ||
+            msg.includes('resize observer')
+          )) {
+            return;
+          }
+          originalError.apply(console, args);
+        };
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
