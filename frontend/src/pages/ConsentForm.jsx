@@ -143,33 +143,40 @@ const ConsentForm = () => {
         </div>
       )}
 
-      {/* Premium Header with Sophisticated Logo */}
+      {/* Premium Header with Air India Style Logo */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-40">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-5">
-              {/* Sophisticated Logo */}
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl blur-xl opacity-50"></div>
-                <div className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 rounded-2xl shadow-2xl border-2 border-amber-200">
-                  <div className="text-center">
-                    <div className="text-white font-bold text-2xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>S</div>
-                    <div className="text-white text-xs font-semibold" style={{ fontFamily: 'Poppins, sans-serif' }}>AIR</div>
-                  </div>
+            <div className="flex items-center space-x-4">
+              {/* Air India Style Logo with Swoosh */}
+              <div className="flex items-center gap-3">
+                <div className="flex flex-col">
+                  <h1 className="text-4xl font-bold tracking-wide text-white" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '2px' }}>
+                    SEWAAIR
+                  </h1>
                 </div>
-              </div>
-              <div>
-                <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px' }}>SewaAir</h1>
-                <p className="text-red-100 text-base font-medium tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>EXCELLENCE IN AVIATION</p>
+                {/* Red Swoosh Element */}
+                <svg className="h-12 w-16" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 38C2 38 15 32 25 25C35 18 45 10 58 2C58 2 50 8 40 15C30 22 20 30 10 36C8 37.5 5 38.5 2 38Z" 
+                        fill="url(#redGradient)" 
+                        stroke="url(#redGradient)" 
+                        strokeWidth="1"/>
+                  <defs>
+                    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
+                      <stop offset="100%" style={{ stopColor: '#b91c1c', stopOpacity: 1 }} />
+                    </linearGradient>
+                  </defs>
+                </svg>
               </div>
             </div>
             <a
               href="/admin"
-              className="flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              style={{ fontFamily: 'Poppins, sans-serif' }}
+              className="flex items-center gap-2 px-6 py-3 bg-red-700 hover:bg-red-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              style={{ fontFamily: 'Montserrat, sans-serif' }}
             >
               <Lock className="h-5 w-5" />
-              Admin Panel
+              ADMIN PANEL
             </a>
           </div>
         </div>
@@ -189,10 +196,10 @@ const ConsentForm = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-red-900/85 via-red-800/80 to-amber-700/85"></div>
         
         <div className="relative container mx-auto px-6 text-center">
-          <h2 className="text-6xl font-bold mb-6 text-white drop-shadow-2xl" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <h2 className="text-6xl font-bold mb-6 text-white drop-shadow-2xl" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '1px' }}>
             Passenger Consent Form
           </h2>
-          <p className="text-2xl text-red-50 max-w-2xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Poppins, sans-serif' }}>
+          <p className="text-2xl text-red-50 max-w-2xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Montserrat, sans-serif' }}>
             Please complete the form below to proceed with your travel documentation
           </p>
         </div>
