@@ -95,33 +95,33 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-stone-50">
-      {/* Elegant Header with Refined Logo */}
-      <header className="bg-white border-b border-gray-200 shadow-sm">
-        <div className="container mx-auto px-6 py-5">
+      {/* Luxury Header with Premium Logo */}
+      <header className="bg-gradient-to-r from-stone-50 to-amber-50 border-b-2 border-amber-200 shadow-lg">
+        <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
-                <h1 className="text-4xl tracking-wide" style={{ fontFamily: 'Raleway, sans-serif' }}>
-                  <span style={{ fontWeight: 600, color: '#292524', letterSpacing: '1px' }}>Sewa</span>
-                  <span style={{ fontWeight: 300, color: '#78716c', letterSpacing: '2px' }}>Air</span>
+                <h1 className="text-5xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                  <span style={{ fontWeight: 600, color: '#92400e', letterSpacing: '2px' }}>Sewa</span>
+                  <span style={{ fontWeight: 300, color: '#b8860b', letterSpacing: '3px' }}>Air</span>
                 </h1>
-                {/* Elegant Swoosh */}
-                <svg className="h-12 w-16 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Gold Swoosh */}
+                <svg className="h-14 w-18 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
-                        fill="#d97706" 
-                        opacity="0.8"/>
+                        fill="#d4af37" 
+                        opacity="0.9"/>
                   <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
-                        fill="#b45309" 
-                        opacity="0.6"/>
+                        fill="#b8860b" 
+                        opacity="0.7"/>
                 </svg>
               </div>
             </div>
             <a
               href="/"
-              className="flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 rounded-lg text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
-              style={{ fontFamily: 'Raleway, sans-serif', letterSpacing: '0.5px' }}
+              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-800"
+              style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
             >
-              <Plane className="h-4 w-4" />
+              <Plane className="h-5 w-5" />
               Back to Form
             </a>
           </div>
