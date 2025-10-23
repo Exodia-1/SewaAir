@@ -173,17 +173,24 @@ const ConsentForm = () => {
         </div>
       </header>
 
-      {/* Clean Hero - No Images */}
-      <div className="relative overflow-hidden bg-gradient-to-br from-red-800 via-red-700 to-amber-600 py-24">
-        {/* Subtle Decorative Elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-300 rounded-full blur-3xl"></div>
-        </div>
+      {/* Clean Hero - With Aircraft Background */}
+      <div className="relative overflow-hidden py-24">
+        {/* Aircraft Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80)',
+          }}
+        ></div>
+        
+        {/* Elegant Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/85 via-red-800/80 to-amber-700/85"></div>
         
         <div className="relative container mx-auto px-6 text-center">
-          <h2 className="text-6xl font-bold mb-6 text-white drop-shadow-lg">Passenger Consent Form</h2>
-          <p className="text-2xl text-red-50 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-6xl font-bold mb-6 text-white drop-shadow-2xl" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
+            Passenger Consent Form
+          </h2>
+          <p className="text-2xl text-red-50 max-w-2xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>
             Please complete the form below to proceed with your travel documentation
           </p>
         </div>
