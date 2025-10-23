@@ -324,16 +324,8 @@ const ConsentForm = () => {
                 {errors.dateOfBirth && <p className="text-sm text-red-600 font-semibold">{errors.dateOfBirth}</p>}
               </div>
 
-              {/* Ornamental divider */}
-              <div className="flex items-center gap-4 py-6">
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
-                <Shield className="h-6 w-6 text-amber-600" />
-                <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-300 to-transparent"></div>
-              </div>
-
               <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-300 rounded-xl p-8 space-y-5 shadow-lg">
-                <h3 className="font-bold text-2xl text-amber-900 flex items-center gap-3" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  <Shield className="h-7 w-7 text-amber-700" />
+                <h3 className="font-bold text-2xl text-amber-900" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   Consent & Disclaimer
                 </h3>
                 <div className="flex items-start space-x-4 bg-white rounded-xl p-6 border-2 border-amber-200 shadow-md">
