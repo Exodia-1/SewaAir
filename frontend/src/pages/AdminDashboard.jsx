@@ -95,23 +95,34 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Header with Premium Logo */}
+      {/* Header with Sophisticated Logo and Back Link */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl">
         <div className="container mx-auto px-6 py-5">
-          <div className="flex items-center space-x-4">
-            {/* Premium Airline Logo */}
-            <div className="relative group">
-              <div className="absolute inset-0 bg-amber-500 rounded-2xl blur-xl opacity-60 group-hover:opacity-80 transition-opacity"></div>
-              <div className="relative bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 p-4 rounded-2xl shadow-2xl border-2 border-amber-300">
-                <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                </svg>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-5">
+              {/* Sophisticated Logo */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl blur-xl opacity-50"></div>
+                <div className="relative flex items-center justify-center w-16 h-16 bg-gradient-to-br from-amber-400 via-amber-500 to-orange-600 rounded-2xl shadow-2xl border-2 border-amber-200">
+                  <div className="text-center">
+                    <div className="text-white font-bold text-2xl leading-none" style={{ fontFamily: 'Poppins, sans-serif' }}>S</div>
+                    <div className="text-white text-xs font-semibold" style={{ fontFamily: 'Poppins, sans-serif' }}>AIR</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h1 className="text-4xl font-bold" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '0.5px' }}>SewaAir Admin</h1>
+                <p className="text-red-100 text-base font-medium tracking-wider" style={{ fontFamily: 'Poppins, sans-serif', letterSpacing: '1px' }}>CONSENT FORM MANAGEMENT</p>
               </div>
             </div>
-            <div>
-              <h1 className="text-4xl font-bold" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>SewaAir Admin</h1>
-              <p className="text-red-100 text-base font-light tracking-wide" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Consent Form Management</p>
-            </div>
+            <a
+              href="/"
+              className="flex items-center gap-2 px-6 py-3 bg-amber-500 hover:bg-amber-600 rounded-xl text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              style={{ fontFamily: 'Poppins, sans-serif' }}
+            >
+              <Plane className="h-5 w-5" />
+              Back to Form
+            </a>
           </div>
         </div>
       </header>
