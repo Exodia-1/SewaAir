@@ -108,19 +108,24 @@ const ConsentForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Premium Header */}
+      {/* Premium Header with Logo */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-50">
         <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
+              {/* Premium Logo */}
               <div className="relative group">
-                <div className="absolute inset-0 bg-amber-400 rounded-xl blur opacity-40 group-hover:opacity-60 transition-opacity"></div>
-                <div className="relative bg-gradient-to-br from-amber-400 to-amber-600 p-4 rounded-xl shadow-xl">
-                  <Plane className="h-9 w-9 text-white" />
+                <div className="absolute inset-0 bg-amber-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                <div className="relative bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 p-4 rounded-2xl shadow-2xl border-2 border-amber-300">
+                  <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5" />
+                    <path d="M2 12l10 5 10-5" />
+                  </svg>
                 </div>
               </div>
               <div>
-                <h1 className="text-4xl font-bold tracking-tight">SewaAir</h1>
+                <h1 className="text-4xl font-bold tracking-tight" style={{ fontFamily: 'Georgia, serif' }}>SewaAir</h1>
                 <p className="text-red-100 text-base font-light">Passenger Consent Form</p>
               </div>
             </div>
@@ -135,13 +140,13 @@ const ConsentForm = () => {
         </div>
       </header>
 
-      {/* Premium Hero */}
+      {/* Premium Hero with Better Image */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/95 via-purple-900/90 to-red-900/95 z-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/90 via-purple-900/85 to-red-900/90 z-10"></div>
         <div 
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80)',
+            backgroundImage: 'url(https://images.unsplash.com/photo-1544016768-982d1554f0b9?w=1200&q=80)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -283,36 +288,13 @@ const ConsentForm = () => {
                 {errors.dateOfBirth && <p className="text-sm text-red-600 font-medium">{errors.dateOfBirth}</p>}
               </div>
 
-              {/* Premium Disclaimer */}
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-2xl p-8 space-y-5 shadow-lg">
-                <h3 className="font-bold text-xl text-amber-900 flex items-center gap-3">
-                  <Shield className="h-6 w-6" />
+              {/* Compact Disclaimer */}
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl p-6 space-y-4 shadow-md">
+                <h3 className="font-bold text-lg text-amber-900 flex items-center gap-2">
+                  <Shield className="h-5 w-5" />
                   Consent & Disclaimer
                 </h3>
-                <div className="text-base text-gray-700 space-y-3 leading-relaxed">
-                  <p className="font-semibold">
-                    By submitting this form, I hereby acknowledge and agree to the following:
-                  </p>
-                  <ul className="space-y-2 ml-1">
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>All information provided is accurate and complete to the best of my knowledge</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>I consent to SewaAir processing my personal data for travel-related services</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>I understand that false information may result in denial of services</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
-                      <span>I agree to comply with all applicable travel regulations and airline policies</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="flex items-start space-x-4 pt-3 bg-white rounded-xl p-5 border-2 border-amber-200">
+                <div className="flex items-start space-x-3 bg-white rounded-lg p-4 border border-amber-200">
                   <Checkbox
                     id="disclaimer"
                     checked={disclaimerAccepted}
@@ -321,9 +303,9 @@ const ConsentForm = () => {
                   />
                   <Label
                     htmlFor="disclaimer"
-                    className="text-base font-semibold leading-relaxed cursor-pointer text-gray-800"
+                    className="text-sm leading-relaxed cursor-pointer text-gray-700"
                   >
-                    I have read and agree to the above terms and conditions *
+                    I hereby confirm that all information provided is accurate and complete. I consent to SewaAir processing my personal data for travel-related services and agree to comply with all applicable travel regulations. *
                   </Label>
                 </div>
                 {errors.disclaimer && <p className="text-sm text-red-600 font-bold">{errors.disclaimer}</p>}

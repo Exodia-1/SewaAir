@@ -5,7 +5,7 @@ import { Input } from '../components/ui/input';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../components/ui/table';
 import { Badge } from '../components/ui/badge';
 import { ScrollArea } from '../components/ui/scroll-area';
-import { Plane, Users, FileText, Download, Search, Trash2, Database } from 'lucide-react';
+import { Plane, Users, FileText, Download, Search, Trash2 } from 'lucide-react';
 import { format } from 'date-fns';
 
 const AdminDashboard = () => {
@@ -95,59 +95,52 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Header */}
-      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-xl">
-        <div className="container mx-auto px-4 py-6">
+      {/* Header with Premium Logo */}
+      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex items-center space-x-4">
-            <div className="bg-gradient-to-br from-amber-400 to-amber-600 p-3 rounded-lg shadow-lg">
-              <Plane className="h-8 w-8 text-white" />
+            {/* Premium Logo */}
+            <div className="relative group">
+              <div className="absolute inset-0 bg-amber-500 rounded-2xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="relative bg-gradient-to-br from-amber-400 via-amber-500 to-amber-600 p-4 rounded-2xl shadow-2xl border-2 border-amber-300">
+                <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
             </div>
             <div>
-              <h1 className="text-3xl font-bold">SewaAir Admin</h1>
-              <p className="text-red-100 text-sm">Consent Form Management</p>
+              <h1 className="text-4xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>SewaAir Admin</h1>
+              <p className="text-red-100 text-base font-light">Consent Form Management</p>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Stats Section */}
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <Card className="bg-white shadow-lg border-l-4 border-red-600">
+      {/* Stats Section - Only 2 Cards */}
+      <div className="container mx-auto px-6 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <Card className="bg-white shadow-xl border-l-4 border-red-600 hover:shadow-2xl transition-shadow duration-300">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-gray-600">Total Submissions</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex items-center justify-between">
-                <span className="text-3xl font-bold text-red-900">{submissions.length}</span>
-                <Users className="h-8 w-8 text-red-600" />
+                <span className="text-4xl font-bold text-red-900">{submissions.length}</span>
+                <Users className="h-10 w-10 text-red-600" />
               </div>
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg border-l-4 border-amber-500">
+          <Card className="bg-white shadow-xl border-l-4 border-amber-500 hover:shadow-2xl transition-shadow duration-300">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-gray-600">Today's Submissions</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="flex items-center justify-between">
-                <span className="text-3xl font-bold text-amber-900">{todayCount}</span>
-                <FileText className="h-8 w-8 text-amber-600" />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card className="bg-white shadow-lg border-l-4 border-purple-600">
-            <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-gray-600">Data Storage</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="flex items-center justify-between">
-                <div>
-                  <span className="text-2xl font-bold text-purple-900">localStorage</span>
-                  <p className="text-xs text-gray-500 mt-1">Browser-based</p>
-                </div>
-                <Database className="h-8 w-8 text-purple-600" />
+                <span className="text-4xl font-bold text-amber-900">{todayCount}</span>
+                <FileText className="h-10 w-10 text-amber-600" />
               </div>
             </CardContent>
           </Card>
