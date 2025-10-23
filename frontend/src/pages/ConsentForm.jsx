@@ -107,34 +107,32 @@ const ConsentForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Success Modal - Elegant Design */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-stone-50">
+      {/* Success Modal */}
       {showSuccessModal && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden">
-            {/* Header */}
-            <div className="bg-gradient-to-r from-red-700 to-red-900 p-8 text-center">
+            <div className="bg-gradient-to-r from-amber-600 to-amber-700 p-8 text-center">
               <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
                 <CheckCircle2 className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="text-3xl font-bold text-white mb-2">Form Submitted</h3>
-              <p className="text-red-100 text-lg">
+              <h3 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Raleway, sans-serif' }}>Form Submitted</h3>
+              <p className="text-amber-50 text-lg" style={{ fontFamily: 'Raleway, sans-serif' }}>
                 Your consent form has been successfully received
               </p>
             </div>
-            
-            {/* Content */}
             <div className="p-8">
               <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
-                <p className="text-sm text-gray-600 mb-2 font-medium">Reference ID</p>
+                <p className="text-sm text-gray-600 mb-2 font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>Reference ID</p>
                 <p className="text-3xl font-bold text-gray-900 font-mono tracking-tight">{submissionId}</p>
               </div>
-              <p className="text-gray-600 text-center mb-6">
+              <p className="text-gray-600 text-center mb-6" style={{ fontFamily: 'Raleway, sans-serif' }}>
                 Please save this reference ID for your records
               </p>
               <Button
                 onClick={() => setShowSuccessModal(false)}
-                className="w-full bg-gradient-to-r from-red-700 to-red-900 hover:from-red-800 hover:to-red-950 text-white py-6 text-lg rounded-xl"
+                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white py-6 text-lg rounded-xl"
+                style={{ fontFamily: 'Raleway, sans-serif' }}
               >
                 Continue
               </Button>
@@ -143,57 +141,50 @@ const ConsentForm = () => {
         </div>
       )}
 
-      {/* Premium Header with Refined Logo */}
-      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-40">
-        <div className="container mx-auto px-6 py-6">
+      {/* Elegant Header */}
+      <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-40">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              {/* Refined Premium Logo */}
-              <div className="flex items-center gap-3">
-                <h1 className="text-5xl font-bold tracking-wider text-white" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, letterSpacing: '4px' }}>
-                  SEWA<span className="font-light">AIR</span>
-                </h1>
-                {/* Elegant Curved Swoosh */}
-                <svg className="h-14 w-20 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
-                        fill="#DC2626" 
-                        opacity="0.9"/>
-                  <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
-                        fill="#B91C1C" 
-                        opacity="0.7"/>
-                </svg>
-              </div>
+            <div className="flex items-center gap-3">
+              <h1 className="text-4xl font-bold tracking-wide" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, letterSpacing: '3px', color: '#7f1d1d' }}>
+                Sewa<span className="font-light" style={{ color: '#d97706' }}>Air</span>
+              </h1>
+              <svg className="h-12 w-16 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
+                      fill="#d97706" 
+                      opacity="0.8"/>
+                <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
+                      fill="#b45309" 
+                      opacity="0.6"/>
+              </svg>
             </div>
             <a
               href="/admin"
-              className="flex items-center gap-2 px-7 py-3.5 bg-red-700 hover:bg-red-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              style={{ fontFamily: 'Raleway, sans-serif', letterSpacing: '1.5px' }}
+              className="flex items-center gap-2 px-6 py-3 bg-amber-600 hover:bg-amber-700 rounded-lg text-white font-medium shadow-md hover:shadow-lg transition-all duration-300"
+              style={{ fontFamily: 'Raleway, sans-serif', letterSpacing: '0.5px' }}
             >
-              <Lock className="h-5 w-5" />
-              ADMIN
+              <Lock className="h-4 w-4" />
+              Admin
             </a>
           </div>
         </div>
       </header>
 
-      {/* Clean Hero - With Aircraft Background */}
-      <div className="relative overflow-hidden py-28">
-        {/* Aircraft Background Image */}
+      {/* Elegant Hero */}
+      <div className="relative overflow-hidden py-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80)',
           }}
         ></div>
-        
-        {/* Elegant Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/85 via-red-800/80 to-amber-700/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-900/70 via-amber-900/60 to-stone-800/70"></div>
         
         <div className="relative container mx-auto px-6 text-center">
-          <h2 className="text-7xl font-light mb-6 text-white drop-shadow-2xl" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 300, letterSpacing: '3px' }}>
+          <h2 className="text-6xl font-light mb-5 text-white drop-shadow-lg" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 300, letterSpacing: '2px' }}>
             Passenger Consent Form
           </h2>
-          <p className="text-2xl text-red-50 max-w-2xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Raleway, sans-serif', letterSpacing: '1px' }}>
+          <p className="text-xl text-stone-100 max-w-2xl mx-auto leading-relaxed font-light" style={{ fontFamily: 'Raleway, sans-serif' }}>
             Complete the form below to proceed with your travel documentation
           </p>
         </div>
@@ -201,15 +192,15 @@ const ConsentForm = () => {
 
       {/* Premium Form */}
       <div className="container mx-auto px-6 py-16 max-w-4xl">
-        <Card className="shadow-2xl border-0 overflow-hidden">
-          <CardHeader className="bg-gradient-to-r from-red-50 via-amber-50 to-red-50 border-b-2 border-amber-200 py-8">
+        <Card className="shadow-xl border border-gray-200 overflow-hidden bg-white">
+          <CardHeader className="bg-gradient-to-r from-stone-50 to-amber-50 border-b border-gray-200 py-8">
             <div className="flex items-center gap-4">
-              <div className="p-3 bg-gradient-to-br from-red-700 to-red-800 rounded-xl">
-                <Plane className="h-7 w-7 text-white" />
+              <div className="p-3 bg-amber-600 rounded-lg">
+                <Plane className="h-6 w-6 text-white" />
               </div>
               <div>
-                <CardTitle className="text-3xl text-red-900 font-bold">Personal Information</CardTitle>
-                <CardDescription className="text-base text-gray-600 mt-1">
+                <CardTitle className="text-3xl text-stone-800 font-bold" style={{ fontFamily: 'Raleway, sans-serif' }}>Personal Information</CardTitle>
+                <CardDescription className="text-base text-gray-600 mt-1" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   Please provide accurate information as per your travel documents
                 </CardDescription>
               </div>
@@ -217,9 +208,8 @@ const ConsentForm = () => {
           </CardHeader>
           <CardContent className="p-10">
             <form onSubmit={handleSubmit} className="space-y-8">
-              {/* Name Field */}
               <div className="space-y-3">
-                <Label htmlFor="name" className="text-gray-800 font-semibold text-base">
+                <Label htmlFor="name" className="text-gray-700 font-semibold text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   Full Name *
                 </Label>
                 <Input
@@ -228,16 +218,16 @@ const ConsentForm = () => {
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className={cn(
-                    "h-14 text-lg px-5 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm",
-                    errors.name ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
+                    "h-14 text-lg px-5 border-2 rounded-lg transition-all duration-300 shadow-sm",
+                    errors.name ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-amber-500 hover:border-amber-400"
                   )}
+                  style={{ fontFamily: 'Raleway, sans-serif' }}
                 />
                 {errors.name && <p className="text-sm text-red-600 font-medium">{errors.name}</p>}
               </div>
 
-              {/* Phone Number Field */}
               <div className="space-y-3">
-                <Label htmlFor="phoneNumber" className="text-gray-800 font-semibold text-base">
+                <Label htmlFor="phoneNumber" className="text-gray-700 font-semibold text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   Phone Number *
                 </Label>
                 <Input
@@ -246,16 +236,16 @@ const ConsentForm = () => {
                   value={formData.phoneNumber}
                   onChange={(e) => handleInputChange('phoneNumber', e.target.value)}
                   className={cn(
-                    "h-14 text-lg px-5 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm",
-                    errors.phoneNumber ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
+                    "h-14 text-lg px-5 border-2 rounded-lg transition-all duration-300 shadow-sm",
+                    errors.phoneNumber ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-amber-500 hover:border-amber-400"
                   )}
+                  style={{ fontFamily: 'Raleway, sans-serif' }}
                 />
                 {errors.phoneNumber && <p className="text-sm text-red-600 font-medium">{errors.phoneNumber}</p>}
               </div>
 
-              {/* Address Field */}
               <div className="space-y-3">
-                <Label htmlFor="address" className="text-gray-800 font-semibold text-base">
+                <Label htmlFor="address" className="text-gray-700 font-semibold text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   Residential Address *
                 </Label>
                 <Textarea
@@ -264,16 +254,16 @@ const ConsentForm = () => {
                   value={formData.address}
                   onChange={(e) => handleInputChange('address', e.target.value)}
                   className={cn(
-                    "min-h-32 text-lg px-5 py-4 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm resize-none",
-                    errors.address ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
+                    "min-h-32 text-lg px-5 py-4 border-2 rounded-lg transition-all duration-300 shadow-sm resize-none",
+                    errors.address ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-amber-500 hover:border-amber-400"
                   )}
+                  style={{ fontFamily: 'Raleway, sans-serif' }}
                 />
                 {errors.address && <p className="text-sm text-red-600 font-medium">{errors.address}</p>}
               </div>
 
-              {/* Passport Number Field */}
               <div className="space-y-3">
-                <Label htmlFor="passportNumber" className="text-gray-800 font-semibold text-base">
+                <Label htmlFor="passportNumber" className="text-gray-700 font-semibold text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   Passport Number *
                 </Label>
                 <Input
@@ -282,27 +272,27 @@ const ConsentForm = () => {
                   value={formData.passportNumber}
                   onChange={(e) => handleInputChange('passportNumber', e.target.value.toUpperCase())}
                   className={cn(
-                    "h-14 text-lg px-5 border-2 rounded-xl transition-all duration-300 focus:scale-[1.01] shadow-sm uppercase font-mono tracking-wider",
-                    errors.passportNumber ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-red-500 hover:border-red-300"
+                    "h-14 text-lg px-5 border-2 rounded-lg transition-all duration-300 shadow-sm uppercase font-mono tracking-wider",
+                    errors.passportNumber ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-amber-500 hover:border-amber-400"
                   )}
                 />
                 {errors.passportNumber && <p className="text-sm text-red-600 font-medium">{errors.passportNumber}</p>}
               </div>
 
-              {/* Date of Birth Field */}
               <div className="space-y-3">
-                <Label className="text-gray-800 font-semibold text-base">Date of Birth *</Label>
+                <Label className="text-gray-700 font-semibold text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>Date of Birth *</Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full h-14 justify-start text-left font-normal text-lg px-5 border-2 rounded-xl hover:scale-[1.01] transition-all duration-300 shadow-sm",
+                        "w-full h-14 justify-start text-left font-normal text-lg px-5 border-2 rounded-lg transition-all duration-300 shadow-sm",
                         !formData.dateOfBirth && "text-gray-500",
-                        errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-gray-300 hover:border-red-300"
+                        errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-gray-300 hover:border-amber-400"
                       )}
+                      style={{ fontFamily: 'Raleway, sans-serif' }}
                     >
-                      <CalendarIcon className="mr-3 h-5 w-5 text-red-600" />
+                      <CalendarIcon className="mr-3 h-5 w-5 text-amber-600" />
                       {formData.dateOfBirth ? (
                         <span className="font-medium">{format(formData.dateOfBirth, 'dd/MM/yyyy')}</span>
                       ) : (
@@ -324,10 +314,9 @@ const ConsentForm = () => {
                 {errors.dateOfBirth && <p className="text-sm text-red-600 font-medium">{errors.dateOfBirth}</p>}
               </div>
 
-              {/* Compact Disclaimer */}
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300 rounded-xl p-6 space-y-4 shadow-md">
-                <h3 className="font-bold text-lg text-amber-900 flex items-center gap-2">
-                  <Shield className="h-5 w-5" />
+              <div className="bg-gradient-to-br from-amber-50 to-stone-50 border-2 border-amber-200 rounded-xl p-6 space-y-4">
+                <h3 className="font-bold text-lg text-stone-800 flex items-center gap-2" style={{ fontFamily: 'Raleway, sans-serif' }}>
+                  <Shield className="h-5 w-5 text-amber-600" />
                   Consent & Disclaimer
                 </h3>
                 <div className="flex items-start space-x-3 bg-white rounded-lg p-4 border border-amber-200">
@@ -340,6 +329,7 @@ const ConsentForm = () => {
                   <Label
                     htmlFor="disclaimer"
                     className="text-sm leading-relaxed cursor-pointer text-gray-700"
+                    style={{ fontFamily: 'Raleway, sans-serif' }}
                   >
                     I hereby confirm that all information provided is accurate and complete. I consent to SewaAir processing my personal data for travel-related services and agree to comply with all applicable travel regulations. *
                   </Label>
@@ -347,10 +337,10 @@ const ConsentForm = () => {
                 {errors.disclaimer && <p className="text-sm text-red-600 font-bold">{errors.disclaimer}</p>}
               </div>
 
-              {/* Premium Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-700 via-red-800 to-red-900 hover:from-red-800 hover:via-red-900 hover:to-red-950 text-white font-bold py-7 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-[1.02] rounded-xl"
+                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-bold py-7 text-xl shadow-xl hover:shadow-2xl transition-all duration-300 rounded-xl"
+                style={{ fontFamily: 'Raleway, sans-serif' }}
               >
                 <CheckCircle2 className="mr-3 h-6 w-6" />
                 Submit Consent Form
@@ -359,9 +349,8 @@ const ConsentForm = () => {
           </CardContent>
         </Card>
 
-        {/* Footer */}
         <div className="text-center mt-10 text-gray-600">
-          <p className="text-base">
+          <p className="text-base" style={{ fontFamily: 'Raleway, sans-serif' }}>
             Your privacy is important to us. All data is stored securely and processed confidentially.
           </p>
         </div>
