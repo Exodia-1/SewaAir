@@ -138,26 +138,36 @@ const ConsentForm = () => {
         </div>
       </header>
 
-      {/* Premium Hero with Better Image */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/90 via-purple-900/85 to-red-900/90 z-10"></div>
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: 'url(https://images.unsplash.com/photo-1544016768-982d1554f0b9?w=1200&q=80)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        ></div>
+      {/* Premium Hero - No Image, Better Gradient */}
+      <div className="relative overflow-hidden bg-gradient-to-br from-red-800 via-red-700 to-amber-600">
+        {/* Decorative Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-amber-300 rounded-full blur-3xl"></div>
+        </div>
         
-        <div className="relative z-20 container mx-auto px-6 py-20 text-center">
-          <div className="inline-block mb-6 p-5 bg-white/10 backdrop-blur-md rounded-2xl">
-            <Shield className="h-20 w-20 text-amber-400" />
+        <div className="relative container mx-auto px-6 py-24 text-center">
+          <div className="inline-block mb-8 p-6 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
+            <Shield className="h-24 w-24 text-amber-300" />
           </div>
-          <h2 className="text-5xl font-bold mb-4 text-white">Passenger Consent Form</h2>
-          <p className="text-2xl text-red-100 max-w-3xl mx-auto">
-            Secure and streamlined travel documentation
+          <h2 className="text-6xl font-bold mb-6 text-white drop-shadow-lg">Passenger Consent Form</h2>
+          <p className="text-2xl text-red-50 max-w-3xl mx-auto leading-relaxed">
+            Secure, reliable, and compliant travel documentation
           </p>
+          <div className="mt-8 flex justify-center gap-6 text-white/90">
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-amber-300" />
+              <span className="text-sm font-medium">Encrypted Data</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-amber-300" />
+              <span className="text-sm font-medium">GDPR Compliant</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircle2 className="h-5 w-5 text-amber-300" />
+              <span className="text-sm font-medium">Instant Processing</span>
+            </div>
+          </div>
         </div>
       </div>
 
