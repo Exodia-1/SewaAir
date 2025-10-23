@@ -95,40 +95,34 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
-      {/* Header with Air India Style Logo and Back Link */}
+      {/* Header with Refined Logo and Back Link */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl">
-        <div className="container mx-auto px-6 py-5">
+        <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
-              {/* Air India Style Logo with Swoosh */}
+            <div className="flex items-center gap-4">
+              {/* Refined Premium Logo */}
               <div className="flex items-center gap-3">
-                <div className="flex flex-col">
-                  <h1 className="text-4xl font-bold tracking-wide text-white" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '2px' }}>
-                    SEWAAIR
-                  </h1>
-                </div>
-                {/* Red Swoosh Element */}
-                <svg className="h-12 w-16" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M2 38C2 38 15 32 25 25C35 18 45 10 58 2C58 2 50 8 40 15C30 22 20 30 10 36C8 37.5 5 38.5 2 38Z" 
-                        fill="url(#redGradient)" 
-                        stroke="url(#redGradient)" 
-                        strokeWidth="1"/>
-                  <defs>
-                    <linearGradient id="redGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{ stopColor: '#dc2626', stopOpacity: 1 }} />
-                      <stop offset="100%" style={{ stopColor: '#b91c1c', stopOpacity: 1 }} />
-                    </linearGradient>
-                  </defs>
+                <h1 className="text-5xl font-bold tracking-wider text-white" style={{ fontFamily: 'Raleway, sans-serif', fontWeight: 700, letterSpacing: '4px' }}>
+                  SEWA<span className="font-light">AIR</span>
+                </h1>
+                {/* Elegant Curved Swoosh */}
+                <svg className="h-14 w-20 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
+                        fill="#DC2626" 
+                        opacity="0.9"/>
+                  <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
+                        fill="#B91C1C" 
+                        opacity="0.7"/>
                 </svg>
               </div>
             </div>
             <a
               href="/"
-              className="flex items-center gap-2 px-6 py-3 bg-red-700 hover:bg-red-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-              style={{ fontFamily: 'Montserrat, sans-serif' }}
+              className="flex items-center gap-2 px-7 py-3.5 bg-red-700 hover:bg-red-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              style={{ fontFamily: 'Raleway, sans-serif', letterSpacing: '1.5px' }}
             >
               <Plane className="h-5 w-5" />
-              BACK TO FORM
+              BACK
             </a>
           </div>
         </div>
