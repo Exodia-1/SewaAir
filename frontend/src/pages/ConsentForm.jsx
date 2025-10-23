@@ -346,14 +346,15 @@ const ConsentForm = () => {
                 {errors.disclaimer && <p className="text-sm text-red-600 font-bold">{errors.disclaimer}</p>}
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-amber-600 via-amber-700 to-amber-600 hover:from-amber-700 hover:via-amber-800 hover:to-amber-700 text-white font-bold py-8 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-xl border-2 border-amber-800"
-                style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
-              >
-                <CheckCircle2 className="mr-3 h-7 w-7" />
-                Submit Consent Form
-              </Button>
+              <div className="flex justify-center pt-4">
+                <Button
+                  type="submit"
+                  className="px-16 bg-gradient-to-r from-amber-600 via-amber-700 to-amber-600 hover:from-amber-700 hover:via-amber-800 hover:to-amber-700 text-white font-bold py-8 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-xl border-2 border-amber-800"
+                  style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
+                >
+                  Submit Consent Form
+                </Button>
+              </div>
             </form>
           </CardContent>
         </Card>
