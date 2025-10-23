@@ -3,16 +3,37 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
-// Suppress ResizeObserver error
-const resizeObserverLoopErrRe = /^[^(ResizeObserver loop limit exceeded)]/;
-const resizeObserverLoopErr = /^ResizeObserver loop completed with undelivered notifications/;
+// Comprehensive ResizeObserver error suppression
+window.addEventListener('error', (e) => {
+  if (
+    e.message.includes('ResizeObserver') ||
+    e.message.includes('resize observer')
+  ) {
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    return false;
+  }
+});
+
+window.addEventListener('unhandledrejection', (e) => {
+  if (
+    e.reason?.message?.includes('ResizeObserver') ||
+    e.reason?.message?.includes('resize observer')
+  ) {
+    e.stopImmediatePropagation();
+    e.preventDefault();
+    return false;
+  }
+});
+
+// Suppress console errors for ResizeObserver
 const consoleError = console.error;
 console.error = (...args) => {
   const firstArg = args[0];
   if (typeof firstArg === 'string') {
     if (
-      resizeObserverLoopErrRe.test(firstArg) ||
-      resizeObserverLoopErr.test(firstArg)
+      firstArg.includes('ResizeObserver') ||
+      firstArg.includes('resize observer')
     ) {
       return;
     }
