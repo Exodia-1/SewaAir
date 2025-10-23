@@ -109,8 +109,8 @@ const AdminDashboard = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-4xl font-bold" style={{ fontFamily: 'Georgia, serif' }}>SewaAir Admin</h1>
-              <p className="text-red-100 text-base font-light tracking-wide">Consent Form Management</p>
+              <h1 className="text-4xl font-bold" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>SewaAir Admin</h1>
+              <p className="text-red-100 text-base font-light tracking-wide" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Consent Form Management</p>
             </div>
           </div>
         </div>
