@@ -108,6 +108,35 @@ const ConsentForm = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-amber-50">
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in duration-300">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 transform animate-in zoom-in duration-300">
+            <div className="text-center">
+              <div className="mx-auto w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-6 animate-bounce">
+                <CheckCircle2 className="h-12 w-12 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-gray-900 mb-3">Successfully Submitted!</h3>
+              <p className="text-gray-600 mb-6 text-lg">
+                Your consent form has been submitted successfully.
+              </p>
+              <div className="bg-gradient-to-r from-red-50 to-amber-50 rounded-xl p-5 mb-6 border-2 border-red-200">
+                <p className="text-sm text-gray-600 mb-2">Your Reference ID:</p>
+                <p className="text-2xl font-bold text-red-800 font-mono">{submissionId}</p>
+              </div>
+              <Button
+                onClick={() => setShowSuccessModal(false)}
+                className="w-full bg-gradient-to-r from-red-700 to-red-900 hover:from-red-800 hover:to-red-950 text-white py-6 text-lg rounded-xl shadow-lg"
+              >
+                Close
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Premium Header with Better Logo */}
+      <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-40">
       {/* Premium Header with Logo */}
       <header className="bg-gradient-to-r from-red-900 via-red-800 to-red-900 text-white shadow-2xl sticky top-0 z-50">
         <div className="container mx-auto px-6 py-5">
