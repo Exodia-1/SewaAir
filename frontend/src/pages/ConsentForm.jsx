@@ -142,33 +142,44 @@ const ConsentForm = () => {
       )}
 
       {/* Air India Style Header */}
-      <header className="bg-gradient-to-r from-red-800 via-red-700 to-red-800 border-b-2 border-red-900 shadow-lg sticky top-0 z-40">
+      <header className="bg-gradient-to-r from-[#8B0000] via-[#A52A2A] to-[#8B0000] border-b-4 border-[#D4AF37] shadow-lg sticky top-0 z-40">
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              {/* Logo Placeholder - Replace with your logo */}
-              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg">
+              {/* 
+                ========================================
+                LOGO PLACEHOLDER - ADD YOUR LOGO HERE
+                ========================================
+                Instructions:
+                1. Save your logo file as 'logo.png' in the /app/frontend/public/ folder
+                2. If your logo has a different name, update src="/logo.png" to src="/your-logo-name.png"
+                3. Recommended logo size: 200x200 pixels or larger (transparent background works best)
+                4. The logo will automatically scale to fit the 64x64px container
+                
+                Current fallback: Shows "SA" text if logo file not found
+              */}
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg border-2 border-[#D4AF37]">
                 <img 
                   src="/logo.png" 
                   alt="SewaAir Logo" 
                   className="w-14 h-14 object-contain"
                   onError={(e) => {
                     e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'block';
+                    e.target.nextSibling.style.display = 'flex';
                   }}
                 />
-                <div style={{ display: 'none', color: '#991b1b', fontSize: '24px', fontWeight: 'bold' }}>SA</div>
+                <div style={{ display: 'none', color: '#8B0000', fontSize: '24px', fontWeight: 'bold' }} className="items-center justify-center w-full h-full">SA</div>
               </div>
               <div>
                 <h1 className="text-4xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   <span style={{ fontWeight: 600, color: '#ffffff', letterSpacing: '2px' }}>Sewa</span>
-                  <span style={{ fontWeight: 300, color: '#ffd700', letterSpacing: '3px' }}>Air</span>
+                  <span style={{ fontWeight: 300, color: '#D4AF37', letterSpacing: '3px' }}>Air</span>
                 </h1>
               </div>
             </div>
             <a
               href="/admin"
-              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border border-red-900"
+              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#8B0000] to-[#A52A2A] hover:from-[#A52A2A] hover:to-[#8B0000] rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-[#D4AF37]"
               style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
             >
               <Lock className="h-5 w-5" />
