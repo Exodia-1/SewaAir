@@ -112,26 +112,26 @@ const ConsentForm = () => {
       {showSuccessModal && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden">
-            <div className="bg-gradient-to-r from-amber-600 to-amber-700 p-8 text-center">
+            <div className="bg-gradient-to-r from-[#8B0000] to-[#A52A2A] p-8 text-center border-b-4 border-[#D4AF37]">
               <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center">
                 <CheckCircle2 className="h-10 w-10 text-green-600" />
               </div>
               <h3 className="text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Raleway, sans-serif' }}>Form Submitted</h3>
-              <p className="text-amber-50 text-lg" style={{ fontFamily: 'Raleway, sans-serif' }}>
+              <p className="text-[#FAF9F6] text-lg" style={{ fontFamily: 'Raleway, sans-serif' }}>
                 Your consent form has been successfully received
               </p>
             </div>
             <div className="p-8">
-              <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-200">
+              <div className="bg-[#FAF9F6] rounded-xl p-6 mb-6 border-2 border-[#D4AF37]">
                 <p className="text-sm text-gray-600 mb-2 font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>Reference ID</p>
-                <p className="text-3xl font-bold text-gray-900 font-mono tracking-tight">{submissionId}</p>
+                <p className="text-3xl font-bold text-[#8B0000] font-mono tracking-tight">{submissionId}</p>
               </div>
               <p className="text-gray-600 text-center mb-6" style={{ fontFamily: 'Raleway, sans-serif' }}>
                 Please save this reference ID for your records
               </p>
               <Button
                 onClick={() => setShowSuccessModal(false)}
-                className="w-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white py-6 text-lg rounded-xl"
+                className="w-full bg-gradient-to-r from-[#8B0000] to-[#A52A2A] hover:from-[#A52A2A] hover:to-[#8B0000] text-white py-6 text-lg rounded-xl border-2 border-[#D4AF37]"
                 style={{ fontFamily: 'Raleway, sans-serif' }}
               >
                 Continue
