@@ -211,17 +211,17 @@ const ConsentForm = () => {
 
       {/* Premium Form */}
       <div className="container mx-auto px-6 py-16 max-w-5xl">
-        <Card className="shadow-2xl border-2 border-amber-200 overflow-hidden bg-white relative">
+        <Card className="shadow-2xl border-2 border-[#D4AF37] overflow-hidden bg-white relative">
           {/* Gold accent line */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500"></div>
+          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#D4AF37] via-[#FFD700] to-[#D4AF37]"></div>
           
-          <CardHeader className="bg-gradient-to-r from-amber-50 via-white to-amber-50 border-b-2 border-amber-100 py-10 px-12">
+          <CardHeader className="bg-gradient-to-r from-[#FAF9F6] via-white to-[#FAF9F6] border-b-2 border-[#D4AF37] py-10 px-12">
             <div className="flex items-start gap-5">
-              <div className="p-4 bg-gradient-to-br from-amber-600 to-amber-700 rounded-xl shadow-lg">
+              <div className="p-4 bg-gradient-to-br from-[#8B0000] to-[#A52A2A] rounded-xl shadow-lg">
                 <Plane className="h-8 w-8 text-white" />
               </div>
               <div className="flex-1">
-                <CardTitle className="text-4xl text-stone-800 font-bold mb-2" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                <CardTitle className="text-4xl text-[#8B0000] font-bold mb-2" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   Personal Information
                 </CardTitle>
                 <CardDescription className="text-lg text-gray-600" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -230,7 +230,7 @@ const ConsentForm = () => {
               </div>
             </div>
           </CardHeader>
-          <CardContent className="p-12 bg-gradient-to-br from-white via-stone-50 to-white">
+          <CardContent className="p-12 bg-gradient-to-br from-white via-[#FAF9F6] to-white">
             <form onSubmit={handleSubmit} className="space-y-10">
               <div className="space-y-4">
                 <Label htmlFor="name" className="text-gray-800 font-bold text-lg flex items-center gap-2" style={{ fontFamily: 'Lato, sans-serif' }}>
@@ -244,7 +244,7 @@ const ConsentForm = () => {
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   className={cn(
                     "h-16 text-lg px-6 border-2 rounded-xl transition-all duration-300 shadow-md bg-white",
-                    errors.name ? "border-red-500 bg-red-50" : "border-amber-300 focus:border-amber-600 hover:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                    errors.name ? "border-red-500 bg-red-50" : "border-[#D4AF37] focus:border-[#8B0000] hover:border-[#A52A2A] focus:ring-2 focus:ring-[#D4AF37]/30"
                   )}
                   style={{ fontFamily: 'Lato, sans-serif' }}
                 />
@@ -262,7 +262,7 @@ const ConsentForm = () => {
                   onChange={(e) => handleInputChange('phoneNumber', e.target.value)}
                   className={cn(
                     "h-16 text-lg px-6 border-2 rounded-xl transition-all duration-300 shadow-md bg-white",
-                    errors.phoneNumber ? "border-red-500 bg-red-50" : "border-amber-300 focus:border-amber-600 hover:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                    errors.phoneNumber ? "border-red-500 bg-red-50" : "border-[#D4AF37] focus:border-[#8B0000] hover:border-[#A52A2A] focus:ring-2 focus:ring-[#D4AF37]/30"
                   )}
                   style={{ fontFamily: 'Lato, sans-serif' }}
                 />
@@ -280,7 +280,7 @@ const ConsentForm = () => {
                   onChange={(e) => handleInputChange('address', e.target.value)}
                   className={cn(
                     "min-h-36 text-lg px-6 py-4 border-2 rounded-xl transition-all duration-300 shadow-md resize-none bg-white",
-                    errors.address ? "border-red-500 bg-red-50" : "border-amber-300 focus:border-amber-600 hover:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                    errors.address ? "border-red-500 bg-red-50" : "border-[#D4AF37] focus:border-[#8B0000] hover:border-[#A52A2A] focus:ring-2 focus:ring-[#D4AF37]/30"
                   )}
                   style={{ fontFamily: 'Lato, sans-serif' }}
                 />
@@ -298,7 +298,7 @@ const ConsentForm = () => {
                   onChange={(e) => handleInputChange('passportNumber', e.target.value.toUpperCase())}
                   className={cn(
                     "h-16 text-lg px-6 border-2 rounded-xl transition-all duration-300 shadow-md uppercase font-mono tracking-wider bg-white",
-                    errors.passportNumber ? "border-red-500 bg-red-50" : "border-amber-300 focus:border-amber-600 hover:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                    errors.passportNumber ? "border-red-500 bg-red-50" : "border-[#D4AF37] focus:border-[#8B0000] hover:border-[#A52A2A] focus:ring-2 focus:ring-[#D4AF37]/30"
                   )}
                 />
                 {errors.passportNumber && <p className="text-sm text-red-600 font-semibold">{errors.passportNumber}</p>}
@@ -313,11 +313,11 @@ const ConsentForm = () => {
                       className={cn(
                         "w-full h-16 justify-start text-left font-normal text-lg px-6 border-2 rounded-xl transition-all duration-300 shadow-md bg-white",
                         !formData.dateOfBirth && "text-gray-500",
-                        errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-amber-300 hover:border-amber-500 focus:ring-2 focus:ring-amber-200"
+                        errors.dateOfBirth ? "border-red-500 bg-red-50" : "border-[#D4AF37] hover:border-[#A52A2A] focus:ring-2 focus:ring-[#D4AF37]/30"
                       )}
                       style={{ fontFamily: 'Lato, sans-serif' }}
                     >
-                      <CalendarIcon className="mr-3 h-6 w-6 text-amber-600" />
+                      <CalendarIcon className="mr-3 h-6 w-6 text-[#8B0000]" />
                       {formData.dateOfBirth ? (
                         <span className="font-semibold">{format(formData.dateOfBirth, 'dd/MM/yyyy')}</span>
                       ) : (
@@ -339,16 +339,16 @@ const ConsentForm = () => {
                 {errors.dateOfBirth && <p className="text-sm text-red-600 font-semibold">{errors.dateOfBirth}</p>}
               </div>
 
-              <div className="bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50 border-2 border-amber-300 rounded-xl p-8 space-y-5 shadow-lg">
-                <h3 className="font-bold text-2xl text-amber-900" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+              <div className="bg-gradient-to-br from-[#FAF9F6] via-[#FFF8DC] to-[#FAF9F6] border-2 border-[#D4AF37] rounded-xl p-8 space-y-5 shadow-lg">
+                <h3 className="font-bold text-2xl text-[#8B0000]" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   Consent & Disclaimer
                 </h3>
-                <div className="flex items-start space-x-4 bg-white rounded-xl p-6 border-2 border-amber-200 shadow-md">
+                <div className="flex items-start space-x-4 bg-white rounded-xl p-6 border-2 border-[#D4AF37] shadow-md">
                   <Checkbox
                     id="disclaimer"
                     checked={disclaimerAccepted}
                     onCheckedChange={setDisclaimerAccepted}
-                    className="mt-1.5 h-6 w-6 border-2 border-amber-600"
+                    className="mt-1.5 h-6 w-6 border-2 border-[#8B0000]"
                   />
                   <Label
                     htmlFor="disclaimer"
@@ -364,7 +364,7 @@ const ConsentForm = () => {
               <div className="flex justify-center pt-4">
                 <Button
                   type="submit"
-                  className="px-16 bg-gradient-to-r from-amber-600 via-amber-700 to-amber-600 hover:from-amber-700 hover:via-amber-800 hover:to-amber-700 text-white font-bold py-8 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-xl border-2 border-amber-800"
+                  className="px-16 bg-gradient-to-r from-[#8B0000] via-[#A52A2A] to-[#8B0000] hover:from-[#A52A2A] hover:via-[#8B0000] hover:to-[#A52A2A] text-white font-bold py-8 text-xl shadow-2xl hover:shadow-3xl transition-all duration-300 rounded-xl border-2 border-[#D4AF37]"
                   style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
                 >
                   Submit Consent Form
