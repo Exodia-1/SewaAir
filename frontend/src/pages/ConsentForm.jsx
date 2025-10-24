@@ -145,21 +145,25 @@ const ConsentForm = () => {
       <header className="bg-gradient-to-r from-red-800 via-red-700 to-red-800 border-b-2 border-red-900 shadow-lg sticky top-0 z-40">
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2">
-                <h1 className="text-5xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+            <div className="flex items-center gap-4">
+              {/* Logo Placeholder - Replace with your logo */}
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg">
+                <img 
+                  src="/logo.png" 
+                  alt="SewaAir Logo" 
+                  className="w-14 h-14 object-contain"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'block';
+                  }}
+                />
+                <div style={{ display: 'none', color: '#991b1b', fontSize: '24px', fontWeight: 'bold' }}>SA</div>
+              </div>
+              <div>
+                <h1 className="text-4xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
                   <span style={{ fontWeight: 600, color: '#ffffff', letterSpacing: '2px' }}>Sewa</span>
                   <span style={{ fontWeight: 300, color: '#ffd700', letterSpacing: '3px' }}>Air</span>
                 </h1>
-                {/* Gold Swoosh */}
-                <svg className="h-14 w-18 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
-                        fill="#ffd700" 
-                        opacity="0.9"/>
-                  <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
-                        fill="#daa520" 
-                        opacity="0.7"/>
-                </svg>
               </div>
             </div>
             <a
