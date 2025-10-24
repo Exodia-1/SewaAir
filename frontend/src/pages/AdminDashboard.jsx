@@ -173,11 +173,11 @@ const AdminDashboard = () => {
         </div>
 
         {/* Submissions Table */}
-        <Card className="shadow-xl border border-gray-200 bg-white">
-          <CardHeader className="bg-gradient-to-r from-stone-50 to-amber-50 border-b border-gray-200">
+        <Card className="shadow-xl border-2 border-[#D4AF37] bg-white">
+          <CardHeader className="bg-gradient-to-r from-[#FAF9F6] to-[#FFF8DC] border-b-2 border-[#D4AF37]">
             <div className="flex items-center justify-between flex-wrap gap-4">
               <div>
-                <CardTitle className="text-2xl text-stone-800" style={{ fontFamily: 'Raleway, sans-serif' }}>Submission Records</CardTitle>
+                <CardTitle className="text-2xl text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Submission Records</CardTitle>
                 <CardDescription className="text-gray-600" style={{ fontFamily: 'Raleway, sans-serif' }}>View and manage all consent form submissions</CardDescription>
               </div>
               <div className="flex items-center gap-3">
@@ -208,7 +208,7 @@ const AdminDashboard = () => {
                   placeholder="Search by name, phone, passport number, or ID..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10 border-gray-300"
+                  className="pl-10 border-2 border-[#D4AF37] focus:border-[#8B0000]"
                   style={{ fontFamily: 'Raleway, sans-serif' }}
                 />
               </div>
@@ -217,8 +217,8 @@ const AdminDashboard = () => {
           <CardContent className="p-0">
             {filteredSubmissions.length === 0 ? (
               <div className="text-center py-16">
-                <FileText className="h-16 w-16 mx-auto text-gray-300 mb-4" />
-                <h3 className="text-xl font-semibold text-gray-600 mb-2" style={{ fontFamily: 'Raleway, sans-serif' }}>
+                <FileText className="h-16 w-16 mx-auto text-[#D4AF37] mb-4" />
+                <h3 className="text-xl font-semibold text-[#8B0000] mb-2" style={{ fontFamily: 'Raleway, sans-serif' }}>
                   {submissions.length === 0 ? 'No Submissions Yet' : 'No Results Found'}
                 </h3>
                 <p className="text-gray-500" style={{ fontFamily: 'Raleway, sans-serif' }}>
@@ -231,24 +231,24 @@ const AdminDashboard = () => {
               <ScrollArea className="h-[600px]">
                 <Table>
                   <TableHeader>
-                    <TableRow className="bg-gray-50">
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>ID</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>Name</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>Phone</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>Address</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>Passport</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>DOB</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>Submitted</TableHead>
-                      <TableHead className="font-semibold" style={{ fontFamily: 'Raleway, sans-serif' }}>Action</TableHead>
+                    <TableRow className="bg-gradient-to-r from-[#FAF9F6] to-[#FFF8DC] border-b-2 border-[#D4AF37]">
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>ID</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Name</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Phone</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Address</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Passport</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>DOB</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Submitted</TableHead>
+                      <TableHead className="font-semibold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Action</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {filteredSubmissions.map((submission) => (
-                      <TableRow key={submission.id} className="hover:bg-gray-50">
+                      <TableRow key={submission.id} className="hover:bg-[#FAF9F6] border-b border-[#D4AF37]/20">
                         <TableCell>
-                          <Badge className="bg-amber-700 text-white">{submission.id}</Badge>
+                          <Badge className="bg-gradient-to-r from-[#8B0000] to-[#A52A2A] text-white border border-[#D4AF37]">{submission.id}</Badge>
                         </TableCell>
-                        <TableCell className="font-medium" style={{ fontFamily: 'Raleway, sans-serif' }}>{submission.name}</TableCell>
+                        <TableCell className="font-medium text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>{submission.name}</TableCell>
                         <TableCell className="font-mono text-sm">{submission.phoneNumber}</TableCell>
                         <TableCell className="max-w-xs truncate" title={submission.address} style={{ fontFamily: 'Raleway, sans-serif' }}>
                           {submission.address}
