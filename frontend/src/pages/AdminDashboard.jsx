@@ -147,26 +147,26 @@ const AdminDashboard = () => {
       {/* Stats Section */}
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-          <Card className="bg-white shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="pb-3 border-b border-gray-100">
-              <CardTitle className="text-sm font-medium text-gray-600" style={{ fontFamily: 'Raleway, sans-serif' }}>Total Submissions</CardTitle>
+          <Card className="bg-white shadow-lg border-2 border-[#D4AF37] hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="pb-3 border-b-2 border-[#FAF9F6]">
+              <CardTitle className="text-sm font-medium text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Total Submissions</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
-                <span className="text-4xl font-bold text-stone-800" style={{ fontFamily: 'Raleway, sans-serif' }}>{submissions.length}</span>
-                <Users className="h-10 w-10 text-amber-600" />
+                <span className="text-4xl font-bold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>{submissions.length}</span>
+                <Users className="h-10 w-10 text-[#D4AF37]" />
               </div>
             </CardContent>
           </Card>
 
-          <Card className="bg-white shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300">
-            <CardHeader className="pb-3 border-b border-gray-100">
-              <CardTitle className="text-sm font-medium text-gray-600" style={{ fontFamily: 'Raleway, sans-serif' }}>Today's Submissions</CardTitle>
+          <Card className="bg-white shadow-lg border-2 border-[#D4AF37] hover:shadow-xl transition-shadow duration-300">
+            <CardHeader className="pb-3 border-b-2 border-[#FAF9F6]">
+              <CardTitle className="text-sm font-medium text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>Today's Submissions</CardTitle>
             </CardHeader>
             <CardContent className="pt-6">
               <div className="flex items-center justify-between">
-                <span className="text-4xl font-bold text-stone-800" style={{ fontFamily: 'Raleway, sans-serif' }}>{todayCount}</span>
-                <FileText className="h-10 w-10 text-amber-600" />
+                <span className="text-4xl font-bold text-[#8B0000]" style={{ fontFamily: 'Raleway, sans-serif' }}>{todayCount}</span>
+                <FileText className="h-10 w-10 text-[#D4AF37]" />
               </div>
             </CardContent>
           </Card>
