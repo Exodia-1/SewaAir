@@ -94,31 +94,47 @@ const AdminDashboard = () => {
   }).length;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-stone-50">
-      {/* Luxury Header with Premium Logo */}
-      <header className="bg-gradient-to-r from-stone-50 to-amber-50 border-b-2 border-amber-200 shadow-lg">
+    <div className="min-h-screen bg-gradient-to-br from-[#FAF9F6] via-white to-[#FFF8DC]">
+      {/* Air India Header with Logo Placeholder */}
+      <header className="bg-gradient-to-r from-[#8B0000] via-[#A52A2A] to-[#8B0000] border-b-4 border-[#D4AF37] shadow-lg">
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="flex items-center gap-2">
-                <h1 className="text-5xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  <span style={{ fontWeight: 600, color: '#92400e', letterSpacing: '2px' }}>Sewa</span>
-                  <span style={{ fontWeight: 300, color: '#b8860b', letterSpacing: '3px' }}>Air</span>
+            <div className="flex items-center gap-4">
+              {/* 
+                ========================================
+                LOGO PLACEHOLDER - ADD YOUR LOGO HERE
+                ========================================
+                Instructions:
+                1. Save your logo file as 'logo.png' in the /app/frontend/public/ folder
+                2. If your logo has a different name, update src="/logo.png" to src="/your-logo-name.png"
+                3. Recommended logo size: 200x200 pixels or larger (transparent background works best)
+                4. The logo will automatically scale to fit the 64x64px container
+                
+                Current fallback: Shows "SA" text if logo file not found
+              */}
+              <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center shadow-lg border-2 border-[#D4AF37]">
+                <img 
+                  src="/logo.png" 
+                  alt="SewaAir Logo" 
+                  className="w-14 h-14 object-contain"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div style={{ display: 'none', color: '#8B0000', fontSize: '24px', fontWeight: 'bold' }} className="items-center justify-center w-full h-full">SA</div>
+              </div>
+              <div>
+                <h1 className="text-4xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
+                  <span style={{ fontWeight: 600, color: '#ffffff', letterSpacing: '2px' }}>Sewa</span>
+                  <span style={{ fontWeight: 300, color: '#D4AF37', letterSpacing: '3px' }}>Air</span>
                 </h1>
-                {/* Gold Swoosh */}
-                <svg className="h-14 w-18 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
-                        fill="#d4af37" 
-                        opacity="0.9"/>
-                  <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
-                        fill="#b8860b" 
-                        opacity="0.7"/>
-                </svg>
+                <p className="text-sm text-[#FAF9F6] mt-1" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}>Admin Dashboard</p>
               </div>
             </div>
             <a
               href="/"
-              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-800"
+              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] hover:from-[#FFD700] hover:to-[#D4AF37] rounded-lg text-[#8B0000] font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-white"
               style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
             >
               <Plane className="h-5 w-5" />
