@@ -141,30 +141,30 @@ const ConsentForm = () => {
         </div>
       )}
 
-      {/* Luxury Header with Premium Logo */}
-      <header className="bg-gradient-to-r from-stone-50 to-amber-50 border-b-2 border-amber-200 shadow-lg sticky top-0 z-40">
+      {/* Air India Style Header */}
+      <header className="bg-gradient-to-r from-red-800 via-red-700 to-red-800 border-b-2 border-red-900 shadow-lg sticky top-0 z-40">
         <div className="container mx-auto px-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="flex items-center gap-2">
                 <h1 className="text-5xl tracking-wide" style={{ fontFamily: 'Cormorant Garamond, serif' }}>
-                  <span style={{ fontWeight: 600, color: '#92400e', letterSpacing: '2px' }}>Sewa</span>
-                  <span style={{ fontWeight: 300, color: '#b8860b', letterSpacing: '3px' }}>Air</span>
+                  <span style={{ fontWeight: 600, color: '#ffffff', letterSpacing: '2px' }}>Sewa</span>
+                  <span style={{ fontWeight: 300, color: '#ffd700', letterSpacing: '3px' }}>Air</span>
                 </h1>
                 {/* Gold Swoosh */}
                 <svg className="h-14 w-18 ml-1" viewBox="0 0 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 45C15 40 25 33 35 25C45 17 55 9 75 2C70 6 60 13 50 20C40 27 30 35 20 42C15 45 10 47 5 45Z" 
-                        fill="#d4af37" 
+                        fill="#ffd700" 
                         opacity="0.9"/>
                   <path d="M8 42C18 37 28 30 38 22C48 14 58 6 78 0C73 4 63 11 53 18C43 25 33 33 23 40C18 43 13 45 8 42Z" 
-                        fill="#b8860b" 
+                        fill="#daa520" 
                         opacity="0.7"/>
                 </svg>
               </div>
             </div>
             <a
               href="/admin"
-              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border border-amber-800"
+              className="flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-red-700 to-red-800 hover:from-red-800 hover:to-red-900 rounded-lg text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 border border-red-900"
               style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '1px' }}
             >
               <Lock className="h-5 w-5" />
@@ -174,7 +174,7 @@ const ConsentForm = () => {
         </div>
       </header>
 
-      {/* Elegant Hero */}
+      {/* Air India Style Hero */}
       <div className="relative overflow-hidden py-20">
         <div 
           className="absolute inset-0 bg-cover bg-center"
@@ -182,13 +182,13 @@ const ConsentForm = () => {
             backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80)',
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-stone-900/75 to-amber-800/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-red-900/85 via-red-800/80 to-red-900/85"></div>
         
         <div className="relative container mx-auto px-6 text-center">
-          <h2 className="text-6xl font-bold mb-5 text-amber-50 drop-shadow-2xl" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600, letterSpacing: '3px' }}>
+          <h2 className="text-6xl font-bold mb-5 text-white drop-shadow-2xl" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600, letterSpacing: '3px' }}>
             Passenger Consent Form
           </h2>
-          <p className="text-xl text-amber-100 max-w-2xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '0.5px' }}>
+          <p className="text-xl text-red-50 max-w-2xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '0.5px' }}>
             Complete the form below to proceed with your travel documentation
           </p>
         </div>
