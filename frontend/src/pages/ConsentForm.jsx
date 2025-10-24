@@ -197,13 +197,13 @@ const ConsentForm = () => {
             backgroundImage: 'url(https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80)',
           }}
         ></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-red-900/85 via-red-800/80 to-red-900/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#8B0000]/90 via-[#A52A2A]/85 to-[#8B0000]/90"></div>
         
         <div className="relative container mx-auto px-6 text-center">
           <h2 className="text-6xl font-bold mb-5 text-white drop-shadow-2xl" style={{ fontFamily: 'Cormorant Garamond, serif', fontWeight: 600, letterSpacing: '3px' }}>
             Passenger Consent Form
           </h2>
-          <p className="text-xl text-red-50 max-w-2xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '0.5px' }}>
+          <p className="text-xl text-[#FAF9F6] max-w-2xl mx-auto leading-relaxed font-medium" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: '0.5px' }}>
             Complete the form below to proceed with your travel documentation
           </p>
         </div>
